@@ -1,0 +1,102 @@
+.desktop-header {
+    @include breakpoint-up(large){
+        justify-content: center;
+    }
+}
+.desktop-shadow {
+    @include breakpoint-up(large){
+        box-shadow: 0 1px 4px -2px rgb(179, 177, 177);  
+    }
+}
+.center-title{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+    font-size: $font-lg;
+    font-weight: 600;
+}
+.opacity{
+    opacity: 0.15;
+}
+.header {
+    &.open {
+        .header__toggle{
+            > span:first-child {
+                transform: rotate(45deg);
+                
+            }
+            > span:nth-child(2){
+                 opacity: 0;
+            }
+            > span:last-child {
+                 transform: rotate(-45deg);
+            }
+        }
+    } 
+
+    nav {
+        position: relative;
+        background-color: $white;
+        padding-top: 1.0625rem;
+        padding-bottom: 1.0625rem;
+        
+    }
+
+    &__logo{
+        width: 8.8125rem;
+        font-size: 2.5rem;
+        color: black;
+    }
+    
+    &__toggle {
+       > span {
+           display: block;
+           width: 26px;
+           height: 2px;
+           background-color: $darkBlue;
+           transition: all 300ms ease-in-out;
+           transform-origin: 3px 1px;
+           &:not(:last-child){
+               margin-bottom: 5px;
+           }
+       }
+    }
+
+    &__menu {
+        background: $white;
+        border-radius: 5px;
+        padding: 1.625rem;
+        position: absolute;
+        z-index: 5;
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+        margin-top: 1.75rem;
+        width: calc(100% - 4.25rem);
+        left: 50%;
+        transform: translateX(-50%);
+        a {
+            padding:0.625rem;
+            display: block;
+            text-align: center;
+            transition: color 300ms ease-in-out;
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+
+    &__links {
+        a{
+            font-size: $font-md;
+            color: black;
+            transition: color 300ms ease-in-out;
+            &:not(:last-child){
+                margin-right: 32px;
+            }
+
+            &:hover {
+                color: $primary;
+            }
+        }
+       
+    }
+}

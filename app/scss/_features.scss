@@ -1,0 +1,70 @@
+.features{
+    h2 {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2.25rem;
+        color:black;
+        font-size: $font-xlg;
+        font-weight: bold;
+    }
+    background-color: $lightGrayishBlue;
+}
+.feature {
+    &__grid{
+        @include breakpoint-up(medium){
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+    &__item{
+        background-color: $white;
+        border-radius: 5px;
+        padding: 0.9375rem;
+        padding-left: 1.5rem;
+        margin-bottom: 2rem;
+
+        @include breakpoint-up(medium){
+            flex: 0 0 46%;
+            margin-left: auto;
+            margin-left: auto;
+           
+        }
+        @include breakpoint-up(large){
+            flex: 0 0 30%;
+        }
+    }
+
+    &__button__icon {
+        span{
+            background: $primary;
+            color: $white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 3rem;
+            vertical-align: middle;
+            font-size: 1.5rem;
+            padding: 0.5rem;
+        }
+    }
+    &__title {
+        margin-top: 0.7rem;
+        margin-bottom: 1.125rem;
+        color:black;
+        font-weight: 600;
+        font-size: $font-md;
+    }
+
+    &__subtitle {
+        font-size: $font-md;
+        color: $darkBlue;
+        margin-bottom: 0.7rem;
+    }
+
+    &__extra {
+        font-size: $font-md;
+        color: $primary;
+        text-transform: capitalize;
+        font-weight: bold;
+        margin-bottom: 1.125rem;
+    }
+}

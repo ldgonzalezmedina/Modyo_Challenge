@@ -1,0 +1,78 @@
+.contact__container{
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+    h2 {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2.25rem;
+        color:black;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    background-color: $lightGrayishBlue;
+}
+.form__container{
+    justify-content: center;
+    border-radius: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    width: fit-content;
+    background: $white;
+    padding: 25px 30px;
+    align-items: center;
+
+    @include breakpoint-up(large){
+        width: 50%;
+    }
+    .title {
+        font-size: $font-md;
+        font-weight: 600;
+        color: black;
+        position: relative;
+        
+        @include breakpoint-up(large){
+            font-size: $font-lg;
+        }
+    }
+    form{
+        .user-details{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .input-box-50{
+                margin: 1.25rem 0 0.75rem 0;
+                width: calc(100%/2 - 20px);
+
+                input{
+                    height: 2.8125rem;
+                    font-size: $font-md;
+                    padding-left: 0.5rem;
+                    width: 100%;
+                }
+            }
+            .input-box {
+                margin: 1.25rem 0 0.75rem 0;
+                width: 100%;
+                input{
+                    height: 2.8125rem;
+                    width: 100%;
+                    font-size: $font-md;
+                    padding-left: 0.5rem;
+                }
+                textarea{
+                    width: 100%;
+                    resize: vertical;
+                }
+            }
+            span.details{
+                display: block;
+                font-weight: 500;
+                color: black;
+                font-size: $font-md;
+                margin-bottom: 5px;
+            }
+        }
+    }
+}

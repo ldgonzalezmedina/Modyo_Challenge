@@ -1,0 +1,15 @@
+.footer{
+    p {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2.25rem;
+        margin-top: 2.25rem;
+        color:$grayishBlue;
+        font-size: $font-sm;
+        @include breakpoint-up(large){
+            margin-top: 4rem;
+            font-size: $font-md;
+        }
+    }
+    background-color:$white
+}

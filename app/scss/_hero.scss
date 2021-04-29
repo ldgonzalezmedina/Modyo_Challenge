@@ -1,0 +1,48 @@
+.hero{
+    @include breakpoint-up(large){
+        display: flex;
+        align-items: center;
+    }
+    &__image{
+        background-image: url('/assets/images/landing_1.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        min-height: 20rem;
+
+        @include breakpoint-up(large){
+            flex: 5;
+            order: 2;
+            height: 41rem;
+            background-position: left center;
+            width: auto;
+            margin-right: -21.875rem;
+        }
+    }
+
+    &__text {
+        text-align: left;
+        @include breakpoint-up(large){
+            flex:2;
+        }
+        h1 {
+            font-weight: 900;
+            font-size: 2.375rem;
+            line-height: 1.15;
+            color: black;
+            margin-bottom: 0.15rem;
+            
+            @include breakpoint-up(large){
+                font-size: $font-xlg;
+            }
+        }
+        p {
+            font-size: $font-md;
+            line-height: 1.5rem;
+            margin-bottom: 2.5rem;
+            @include breakpoint-up (large){
+                font-size: $font-lg;
+            }
+        }
+    }
+}
